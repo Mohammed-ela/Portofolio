@@ -1,0 +1,15 @@
+function ativaLetra(elemento){
+    const arrTexto = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    arrTexto.forEach((letra,i) => {
+        setTimeout(()=>{
+            //concatenation de lettre
+            elemento.innerHTML += letra;
+        },75*i);   
+    });
+}
+
+
+
+const titulo = document.querySelector('.digitando');
+ativaLetra(titulo);
